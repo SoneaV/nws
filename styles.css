@@ -22,7 +22,7 @@ font-weight: normal; font-size: 15px; }
 .answer img {width:100%; padding: 2% 0;}
 .question {padding: 2%;}
 
-.revealBtn, .hideBtn {width:100px; height: 35px; border-radius: 10px; text-align: center; color: #fff; line-height: 35px;}
+.revealBtn, .hideBtn {width:100px; height: 35px; border-radius: 10px; text-align: center; color: #fff; line-height: 35px; cursor: pointer;}
 
 .revealBtn {background:#1d59d1; }
 .hideBtn {background:#ccc}
