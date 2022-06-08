@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+  </head>
+
+  <body>
+    <!-- ==== Slider ====-->
+    <div class="slide">
+      <div class="tri-01"><img src="https://github.com/SoneaV/nws/blob/main/img/img_1.jpg?raw=true"></div>
+      <div class="tri-01"><img src="https://github.com/SoneaV/nws/blob/main/img/img_2.jpg?raw=true"></div>
+      <div class="tri-01"><img src="https://github.com/SoneaV/nws/blob/main/img/img_3.jpg?raw=true"></div>
+      <div class="tri-01"><img src="https://github.com/SoneaV/nws/blob/main/img/img_4.jpg?raw=true"></div>
+      <div class="tri-01"><img src="https://github.com/SoneaV/nws/blob/main/img/img_5.jpg?raw=true"></div>
+</div>
+
+<!-- ==== PHP Questions ====-->
+    
+    <div class="qa-wrap">
+      <h2>PHP Questions</h2>
+      <ol>
+        <!-- Question 00 -->
+        <li>
+          <div class="question">We have a variable, defined as $string, which is a string 200 characters long, and we want to display only 40 characters in a snippet. What approach would you take to achieve this?</div>
+          <div class="QBtns">
+          <div class="revealBtn">Reveal</div>
+          <div class="hideBtn">Hide</div>
+          </div>
+          <!--Answer 00 -->
+         <article class="answer" id="answ_00">
+          <p>    
+$string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu";<br /><br />
+
+echo substr($string,0,40);
+<img src="https://github.com/SoneaV/nws/blob/main/img/code-Answ01.jpg?raw=true"/>
+          </p>   
+        </article>
+        </li>
+
+         <!-- Question 01 -->
+        <li>
+          <div class="question">$string contains letters and numbers, the numbers aren't relevant to us, so we want to remove all of the numbers from the string. What approach would you take to achieve this?</div>
+          <div class="QBtns">
+          <div class="revealBtn">Reveal</div>
+          <div class="hideBtn">Hide</div>
+          </div>
+          <!--Answer 01 -->
+         <article class="answer" id="answ_01">
+          <p>    
+$string = 'Thi123s string o567f text sho887411uld n5ot 1423456789789798432 displ364ay any number456s'; <br /><br />
+echo preg_replace('/[0-9]+/', '', $string);
+<img src="https://github.com/SoneaV/nws/blob/main/img/code-Answ02.jpg?raw=true"/>
+          </p>   
+        </article>
+        </li>
+
+                 <!-- Question 02 -->
+        <li>
+          <div class="question">$string has been encrypted using a basic encryption method. We know that all occurrences of the letters 'a, r, d' were replaced with 'c, m, e' respectively; we need to replace these letters with the respective letters. What approach would you take to achieve this?</div>
+          <div class="QBtns">
+          <div class="revealBtn">Reveal</div>
+          <div class="hideBtn">Hide</div>
+          </div>
+          <!--Answer 02 -->
+         <article class="answer" id="answ_02">
+          <p>    
+$string = "in this text a = c | r = m | d = e  so therefore all of this text will now be jumbled up";
+<br /><br />
+echo str_replace(['a', 'r', 'd'], ['c', 'm', 'e'], $string);
+<img src="https://github.com/SoneaV/nws/blob/main/img/code-Answ03.jpg?raw=true"/>
+          </p>   
+        </article>
+        </li>
+
+        
+<!-- Question 03 -->
+        <li>
+          <div class="question">We know that $string is a url, what we need to know is the domain name used in the url. What approach would you take to achieve this?</div>
+          <div class="QBtns">
+          <div class="revealBtn">Reveal</div>
+          <div class="hideBtn">Hide</div>
+          </div>
+          <!--Answer 03 -->
+         <article class="answer" id="answ_03">
+          <p>    
+$string = "https://www.networldsports.co.uk/gym-equipment.html";
+$domain = parse_url($string);<br />
+<br />
+echo "The domain name is: " . $domain['host'];
+<img src="https://github.com/SoneaV/nws/blob/main/img/code-Answ04.jpg?raw=true"/>
+          </p>   
+        </article>
+        </li>
+
+<!-- Question 04 -->
+        <li>
+          <div class="question">
+Lastly, there were 2 parameters passed in the url. We need to know the name and value of the 2 parameters. What approach would you take to achieve this?
+</div>
+          <div class="QBtns">
+          <div class="revealBtn">Reveal</div>
+          <div class="hideBtn">Hide</div>
+          </div>
+          <!--Answer 04 -->
+         <article class="answer" id="answ_04">
+          <p>    
+$string = "http://domain.com?name=goalpost";
+$domain = parse_url($string);
+parse_str($domain['query'], $query);
+
+echo  $query['name'];
+<img src="https://github.com/SoneaV/nws/blob/main/img/code-Answ05.jpg?raw=true"/>
+          </p>   
+        </article>
+        </li>
+
+ 
+      </ol>
+    </div>
+
+
+  </div>
+   
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+<script src="lib/script.js"></script>
+<script src="lib/init.js"></script>
+  </body>
+</html>
